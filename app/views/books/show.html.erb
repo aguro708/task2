@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="stylesheets/root.scss">
+	<link rel="stylesheet" href="../../assets/stylesheets/books.scss">
 </head>
 <body>
 	<% if flash[:notice] %>
@@ -10,8 +10,9 @@
 		<%= flash[:notice] %>
 	</div>
 	<% end %>
-	<h2><strong>Title:</strong> <%= @book.title %></h2>
-	<h2><strong>Body:</strong> <%= @book.body %></h2>
-	<%= link_to "Edit",edit_book_path(@book.id)%>
+	<p><strong>Title:</strong> <%= @book.title %></p>
+	<p><strong>Body:</strong> <%= @book.body %></p>
+	<%= link_to "Edit",edit_book_path(@book.id) %>
+	|
 	<%= link_to "Back",books_path %>
 </body>
